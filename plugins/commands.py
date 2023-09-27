@@ -324,14 +324,14 @@ async def start(client, message):
                     InlineKeyboardButton("⚜️ ᴠᴇʀɪғʏ ⚜️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
                     InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url=HOW_TO_VERIFY)
                 ]]
-                dmp=await me.reply_text(
+                    await me.reply_text(
                     text=script.VERIFY_TXT.format( message.from_user.mention),
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 await asyncio.sleep(120)
                 await me.delete()
-                await dmp.delete()
+                
                 return
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
@@ -391,14 +391,14 @@ async def start(client, message):
                     InlineKeyboardButton("⚜️ ᴠᴇʀɪғʏ ⚜️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
                     InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url=HOW_TO_VERIFY)
                 ]]
-                dmp=await me.reply_text(
+                    await me.reply_text(
                     text=script.VERIFY_TXT.format( message.from_user.mention),
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 await asyncio.sleep(120)
                 await me.delete()
-                await dmp.delete()
+                
                 return
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
@@ -454,14 +454,14 @@ async def start(client, message):
                     InlineKeyboardButton("⚜️ ᴠᴇʀɪғʏ ⚜️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
                     InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url=HOW_TO_VERIFY)
                 ]]
-                dmp=await me.reply_text(
+                    await me.reply_text(
                     text=script.VERIFY_TXT.format( message.from_user.mention),
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 await asyncio.sleep(120)
                 await me.delete()
-                await dmp.delete()
+                
                 return
     msg = await client.send_cached_media(
         chat_id=message.from_user.id,
