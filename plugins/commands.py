@@ -318,7 +318,7 @@ async def start(client, message):
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
                 btn = [[
                     InlineKeyboardButton("⚜️ ᴠᴇʀɪғʏ ⚜️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
-                    InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url=HOW_TO_VERIFY)
+                    InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url='https://t.me/+YD39Py3A0UAxZmI1')
                 ]]
         dmp=await message.reply_text(
             text=script.VERIFY_TXT.format( message.from_user.mention),
@@ -385,7 +385,7 @@ async def start(client, message):
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
                 btn = [[
                     InlineKeyboardButton("⚜️ ᴠᴇʀɪғʏ ⚜️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
-                    InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url=HOW_TO_VERIFY)
+                    InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url='https://t.me/+YD39Py3A0UAxZmI1')
                 ]]
         dmp=await message.reply_text(
             text=script.VERIFY_TXT.format( message.from_user.mention),
@@ -448,7 +448,7 @@ async def start(client, message):
     if not await check_verification(client, message.from_user.id) and VERIFY == True:
         btn = [[
                     InlineKeyboardButton("⚜️ ᴠᴇʀɪғʏ ⚜️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
-                    InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url=HOW_TO_VERIFY)
+                    InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url='https://t.me/+YD39Py3A0UAxZmI1')
                 ]]
         dmp=await message.reply_text(
             text=script.VERIFY_TXT.format( message.from_user.mention),
