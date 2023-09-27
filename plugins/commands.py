@@ -240,8 +240,8 @@ async def start(client, message):
         is_valid = await check_token(client, userid, token)
         if is_valid == True:
             await client.send_message(LOG_CHANNEL, text=script.VERIFY2_TXT.format(message.from_user.mention, userid, datetime.now(timezone(TIMEZONE)).strftime('%d %B, %Y'))),
-            await message.reply_text(
-                text=script.VERIFED_TXT.format( message.from_user.mention),
+            await message.reply_caption(
+                caption=script.VERIFED_TXT.format( message.from_user.mention),
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Rᴇǫᴜᴇsᴛ Aɢᴀɪɴ", callback_data='close_data')]]),       
             )
             
