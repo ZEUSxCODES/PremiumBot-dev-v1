@@ -326,7 +326,7 @@ async def start(client, message):
                 ]]
                     await message.reply_text(
                     caption=script.VERIFY_TXT.format( message.from_user.mention),
-                    protect_content=True,
+                   # protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 await asyncio.sleep(120)
@@ -393,7 +393,7 @@ async def start(client, message):
                 ]]
                     await message.reply_text(
                     caption=script.VERIFY_TXT.format( message.from_user.mention),
-                    protect_content=True,
+                  #  protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 await asyncio.sleep(120)
@@ -456,7 +456,7 @@ async def start(client, message):
                 ]]
                     await message.reply_text(
                     caption=script.VERIFY_TXT.format( message.from_user.mention),
-                    protect_content=True,
+                #    protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
                 await asyncio.sleep(120)
