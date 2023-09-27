@@ -239,10 +239,9 @@ async def start(client, message):
             )
         is_valid = await check_token(client, userid, token)
         if is_valid == True:
-            await client.send_message(LOG_CHANNEL, text=script.VERIFY2_TXT.format(message.from_user.mention, userid, datetime.now(timezone(TIMEZONE)).strftime('%d %B, %Y'))),
             await message.reply_text(
-                caption=script.VERIFED_TXT.format( message.from_user.mention),
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Rᴇǫᴜᴇsᴛ Aɢᴀɪɴ", callback_data='close_data')]]),       
+                text=f"<b>Hey {message.from_user.mention}, You are successfully verified !\nNow you have unlimited access for all movies till today midnight.</b>",
+                protect_content=True
             )
             
             await verify_user(client, userid, token)
@@ -323,13 +322,10 @@ async def start(client, message):
                     InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url=HOW_TO_VERIFY)
                 ]]
                     await message.reply_text(
-                    caption=script.VERIFY_TXT.format( message.from_user.mention),
-                   # protect_content=True,
+                    text="<b>You are not verified !\nKindly verify to continue !</b>",
+                    protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
-                
-                
-                
                 return
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
@@ -390,13 +386,10 @@ async def start(client, message):
                     InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url=HOW_TO_VERIFY)
                 ]]
                     await message.reply_text(
-                    caption=script.VERIFY_TXT.format( message.from_user.mention),
-                  #  protect_content=True,
+                    text="<b>You are not verified !\nKindly verify to continue !</b>",
+                    protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
-                
-                
-                
                 return
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
@@ -453,13 +446,10 @@ async def start(client, message):
                     InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url=HOW_TO_VERIFY)
                 ]]
                     await message.reply_text(
-                    caption=script.VERIFY_TXT.format( message.from_user.mention),
-                #    protect_content=True,
+                    text="<b>You are not verified !\nKindly verify to continue !</b>",
+                    protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
-                
-                
-                
                 return
     msg = await client.send_cached_media(
         chat_id=message.from_user.id,
