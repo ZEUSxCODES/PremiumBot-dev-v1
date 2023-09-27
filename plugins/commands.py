@@ -328,14 +328,11 @@ async def start(client, message):
                     ]
                 ]
 
-                # Display the final verification message (as a new message)
-                await message.reply_photo(
-                    photo="https://telegra.ph/file/bb29268f7567afb045a6c.jpg",
-                    caption=script.VERIFY_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+                await message.reply_text(
+                    text="<b>You are not verified !\nKindly verify to continue !</b>",
+                    protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
-                # Delete the loading message
-                await loading_message.delete()
                 return
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
@@ -402,14 +399,11 @@ async def start(client, message):
                     ]
                 ]
 
-                # Display the final verification message (as a new message)
-                await message.reply_photo(
-                    photo="https://telegra.ph/file/bb29268f7567afb045a6c.jpg",
-                    caption=script.VERIFY_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+                await message.reply_text(
+                    text="<b>You are not verified !\nKindly verify to continue !</b>",
+                    protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
-                # Delete the loading message
-                await loading_message.delete()
                 return
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
@@ -472,14 +466,11 @@ async def start(client, message):
                     ]
                 ]
 
-                # Display the final verification message (as a new message)
-                await message.reply_photo(
-                    photo="https://telegra.ph/file/bb29268f7567afb045a6c.jpg",
-                    caption=script.VERIFY_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
+                await message.reply_text(
+                    text="<b>You are not verified !\nKindly verify to continue !</b>",
+                    protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
-                # Delete the loading message
-                await loading_message.delete()
                 return
     msg = await client.send_cached_media(
         chat_id=message.from_user.id,
