@@ -331,7 +331,7 @@ async def start(client, message):
                 )
                 await asyncio.sleep(120)
                 await me.delete()
-                await dmb.delete()
+                await dmp.delete()
                 return
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
@@ -398,7 +398,7 @@ async def start(client, message):
                 )
                 await asyncio.sleep(120)
                 await me.delete()
-                await dmb.delete()
+                await dmp.delete()
                 return
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
@@ -461,7 +461,7 @@ async def start(client, message):
                 )
                 await asyncio.sleep(120)
                 await me.delete()
-                await dmb.delete()
+                await dmp.delete()
                 return
     msg = await client.send_cached_media(
         chat_id=message.from_user.id,
