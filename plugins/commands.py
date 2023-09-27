@@ -325,7 +325,7 @@ async def start(client, message):
                     InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url=HOW_TO_VERIFY)
                 ]]
                     await me.reply_text(
-                    text=script.VERIFY_TXT.format( message.from_user.mention),
+                    caption=script.VERIFY_TXT.format( message.from_user.mention),
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -392,7 +392,7 @@ async def start(client, message):
                     InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url=HOW_TO_VERIFY)
                 ]]
                     await me.reply_text(
-                    text=script.VERIFY_TXT.format( message.from_user.mention),
+                    caption=script.VERIFY_TXT.format( message.from_user.mention),
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
@@ -455,7 +455,7 @@ async def start(client, message):
                     InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url=HOW_TO_VERIFY)
                 ]]
                     await me.reply_text(
-                    text=script.VERIFY_TXT.format( message.from_user.mention),
+                    caption=script.VERIFY_TXT.format( message.from_user.mention),
                     protect_content=True,
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
