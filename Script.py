@@ -206,7 +206,9 @@ Tɪᴘ: Sᴇʟᴇᴄᴛ "Lᴀɴɢᴜᴀɢᴇs" ᴏʀ "Sᴇᴀsᴏɴs" Bᴜᴛᴛ
 𝗠𝗲𝘀𝘀𝗮𝗴𝗲 <b>: {}</b>"""
 
     CAPTION = """
- <b>💫 **<a href='https://t.me/+P-zPGy3Gjy1kOWQ9'>{file_caption}</a></b>"""
+ <b>💫 **<a href='https://t.me/+P-zPGy3Gjy1kOWQ9'>{file_name}</a>
+
+JOIN : @Movies7x ⚡**</b>"""
 
     IMDB_TEMPLATE_TXT = """
 <b>
