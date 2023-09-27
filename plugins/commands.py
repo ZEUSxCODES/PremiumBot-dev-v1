@@ -317,13 +317,17 @@ async def start(client, message):
                 f_caption = f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files1.file_name.split()))}"
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
                 btn = [[
-                    InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
+                    InlineKeyboardButton("⚜️ ᴠᴇʀɪғʏ ⚜️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
+                    InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url=HOW_TO_VERIFY)
                 ]]
-                await message.reply_text(
-                    text="<b>You are not verified !\nKindly verify to continue !</b>",
-                    protect_content=True,
-                    reply_markup=InlineKeyboardMarkup(btn)
-                )
+        dmp=await message.reply_text(
+            text=script.VERIFY_TXT.format( message.from_user.mention),
+            protect_content=True,
+            reply_markup=InlineKeyboardMarkup(btn)
+        )
+        await asyncio.sleep(120)
+        await message.delete()
+        await dmp.delete()
                 return
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
@@ -380,13 +384,17 @@ async def start(client, message):
         try:
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
                 btn = [[
-                    InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
+                    InlineKeyboardButton("⚜️ ᴠᴇʀɪғʏ ⚜️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
+                    InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url=HOW_TO_VERIFY)
                 ]]
-                await message.reply_text(
-                    text="<b>You are not verified !\nKindly verify to continue !</b>",
-                    protect_content=True,
-                    reply_markup=InlineKeyboardMarkup(btn)
-                )
+        dmp=await message.reply_text(
+            text=script.VERIFY_TXT.format( message.from_user.mention),
+            protect_content=True,
+            reply_markup=InlineKeyboardMarkup(btn)
+        )
+        await asyncio.sleep(120)
+        await message.delete()
+        await dmp.delete()
                 return
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
@@ -439,13 +447,17 @@ async def start(client, message):
         f_caption = f" {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
     if not await check_verification(client, message.from_user.id) and VERIFY == True:
         btn = [[
-            InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start="))
-        ]]
-        await message.reply_text(
-            text="<b>You are not verified !\nKindly verify to continue !</b>",
+                    InlineKeyboardButton("⚜️ ᴠᴇʀɪғʏ ⚜️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
+                    InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url=HOW_TO_VERIFY)
+                ]]
+        dmp=await message.reply_text(
+            text=script.VERIFY_TXT.format( message.from_user.mention),
             protect_content=True,
             reply_markup=InlineKeyboardMarkup(btn)
         )
+        await asyncio.sleep(120)
+        await message.delete()
+        await dmp.delete()
         return
     msg = await client.send_cached_media(
         chat_id=message.from_user.id,
