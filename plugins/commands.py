@@ -317,15 +317,25 @@ async def start(client, message):
             if f_caption is None:
                 f_caption = f"{' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files1.file_name.split()))}"
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
-                btn =  [[
-                    InlineKeyboardButton("⚜️ ᴠᴇʀɪғʏ ⚜️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
-                    InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url=HOW_TO_VERIFY)
-                ]]
-                    await message.reply_text(
-                    text="<b>You are not verified !\nKindly verify to continue !</b>",
-                    protect_content=True,
+                loading_message = await message.reply("⋘ 𝗖𝗵𝗲𝗰𝗸𝗶𝗻𝗴 𝗩𝗲𝗿𝗶𝗳𝗶𝗰𝗮𝘁𝗶𝗼𝗻 𝗦𝘁𝗮𝘁𝘂𝘀 ⋙")
+                await asyncio.sleep(0.5)
+                await loading_message.edit_text("𝗣𝗹𝗲𝗮𝘀𝗲 𝗪𝗮𝗶𝘁 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗶𝗻𝗴 𝗟𝗶𝗻𝗸....")
+                # Prepare the inline keyboard
+                btn = [
+                    [
+                        InlineKeyboardButton("♻️ Vᴇʀɪғʏ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
+                        InlineKeyboardButton("⚠️ Hᴏᴡ Tᴏ Vᴇʀɪғʏ ⚠️", url='https://t.me/How_To_Download_Movies321')
+                    ]
+                ]
+
+                # Display the final verification message (as a new message)
+                await message.reply_photo(
+                    photo="https://telegra.ph/file/bb29268f7567afb045a6c.jpg",
+                    caption=script.VERIFY_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
+                # Delete the loading message
+                await loading_message.delete()
                 return
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
@@ -381,15 +391,25 @@ async def start(client, message):
         pre, file_id = ((base64.urlsafe_b64decode(data + "=" * (-len(data) % 4))).decode("ascii")).split("_", 1)
         try:
             if not await check_verification(client, message.from_user.id) and VERIFY == True:
-                btn =  [[
-                    InlineKeyboardButton("⚜️ ᴠᴇʀɪғʏ ⚜️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
-                    InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url=HOW_TO_VERIFY)
-                ]]
-                    await message.reply_text(
-                    text="<b>You are not verified !\nKindly verify to continue !</b>",
-                    protect_content=True,
+                loading_message = await message.reply("⋘ 𝗖𝗵𝗲𝗰𝗸𝗶𝗻𝗴 𝗩𝗲𝗿𝗶𝗳𝗶𝗰𝗮𝘁𝗶𝗼𝗻 𝗦𝘁𝗮𝘁𝘂𝘀 ⋙")
+                await asyncio.sleep(0.5)
+                await loading_message.edit_text("𝗣𝗹𝗲𝗮𝘀𝗲 𝗪𝗮𝗶𝘁 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗶𝗻𝗴 𝗟𝗶𝗻𝗸....")
+                # Prepare the inline keyboard
+                btn = [
+                    [
+                        InlineKeyboardButton("♻️ Vᴇʀɪғʏ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
+                        InlineKeyboardButton("⚠️ Hᴏᴡ Tᴏ Vᴇʀɪғʏ ⚠️", url='https://t.me/How_To_Download_Movies321')
+                    ]
+                ]
+
+                # Display the final verification message (as a new message)
+                await message.reply_photo(
+                    photo="https://telegra.ph/file/bb29268f7567afb045a6c.jpg",
+                    caption=script.VERIFY_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
+                # Delete the loading message
+                await loading_message.delete()
                 return
             msg = await client.send_cached_media(
                 chat_id=message.from_user.id,
@@ -441,15 +461,25 @@ async def start(client, message):
     if f_caption is None:
         f_caption = f" {' '.join(filter(lambda x: not x.startswith('[') and not x.startswith('@'), files.file_name.split()))}"
     if not await check_verification(client, message.from_user.id) and VERIFY == True:
-        btn =  [[
-                    InlineKeyboardButton("⚜️ ᴠᴇʀɪғʏ ⚜️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
-                    InlineKeyboardButton("❗ ʜᴏᴡ ᴛᴏ ᴠᴇʀɪғʏ ❗", url=HOW_TO_VERIFY)
-                ]]
-                    await message.reply_text(
-                    text="<b>You are not verified !\nKindly verify to continue !</b>",
-                    protect_content=True,
+        loading_message = await message.reply("⋘ 𝗖𝗵𝗲𝗰𝗸𝗶𝗻𝗴 𝗩𝗲𝗿𝗶𝗳𝗶𝗰𝗮𝘁𝗶𝗼𝗻 𝗦𝘁𝗮𝘁𝘂𝘀 ⋙")
+                await asyncio.sleep(0.5)
+                await loading_message.edit_text("𝗣𝗹𝗲𝗮𝘀𝗲 𝗪𝗮𝗶𝘁 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗶𝗻𝗴 𝗟𝗶𝗻𝗸....")
+                # Prepare the inline keyboard
+                btn = [
+                    [
+                        InlineKeyboardButton("♻️ Vᴇʀɪғʏ ♻️", url=await get_token(client, message.from_user.id, f"https://telegram.me/{temp.U_NAME}?start=")),
+                        InlineKeyboardButton("⚠️ Hᴏᴡ Tᴏ Vᴇʀɪғʏ ⚠️", url='https://t.me/How_To_Download_Movies321')
+                    ]
+                ]
+
+                # Display the final verification message (as a new message)
+                await message.reply_photo(
+                    photo="https://telegra.ph/file/bb29268f7567afb045a6c.jpg",
+                    caption=script.VERIFY_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
                     reply_markup=InlineKeyboardMarkup(btn)
                 )
+                # Delete the loading message
+                await loading_message.delete()
                 return
     msg = await client.send_cached_media(
         chat_id=message.from_user.id,
