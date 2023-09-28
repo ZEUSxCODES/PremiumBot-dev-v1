@@ -222,7 +222,7 @@ async def next_page(bot, query):
     # tutlink = await db.get_settings(self, id):
     # if tutlink and tutlink is not None:
     btn.insert(0,
-        [InlineKeyboardButton(text="𝐇𝐎𝐖 𝐓𝐎 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃", url='https://t.me/How_To_Download_Movies321/14')]
+        [InlineKeyboardButton(text="𝐇𝐎𝐖 𝐓𝐎 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃", url='https://t.me/+YD39Py3A0UAxZmI1')]
         )
     # if ENABLE_SHORTLINK == True:
         # btn.insert(0, [
@@ -282,9 +282,7 @@ async def advantage_spoll_choker(bot, query):
                 reqstr = await bot.get_users(reqstr1)
                 if NO_RESULTS_MSG:
                     await bot.send_message(chat_id=LOG_CHANNEL, text=(script.NORSLTS.format(reqstr.id, reqstr.mention, movie)))
-                btn = [[
-                    InlineKeyboardButton("𝗠𝗼𝘃𝗶𝗲 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗧𝗼 𝗔𝗱𝗺𝗶𝗻", url=f"https://t.me/Filmymod_Support")
-                ]]
+               
                 k = await query.message.edit(script.MVE_NT_FND, reply_markup=InlineKeyboardMarkup(btn))
                 await asyncio.sleep(15)
                 await k.delete()
@@ -1654,7 +1652,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "shortlink_info":
             btn = [[
                     InlineKeyboardButton("⟸ Bᴀᴄᴋ", callback_data="start"),
-                    InlineKeyboardButton("🤵ᴄᴏɴᴛᴀᴄᴛ", url="https://t.me/Filmymod7")
+                    InlineKeyboardButton("🤵ᴄᴏɴᴛᴀᴄᴛ", url="https://t.me/ShinobiUnder")
                   ]]
             await client.edit_message_media(
                 query.message.chat.id, 
@@ -1763,10 +1761,7 @@ async def auto_filter(client, msg, spoll=False):
             return
         if len(message.text) < 100:
             search = message.text
-            btn = [[
-                    InlineKeyboardButton(f"Searching  🔍  for  '{search}'", callback_data=f"close_data")
-                  ]]
-            dlt = await message.reply_sticker('CAACAgUAAxkBAAEKFJhk4hB-2p-tFjm4UQHkWXIon24fiwACoQADyJRkFOU68dHdpF6XMAQ', reply_markup=InlineKeyboardMarkup(btn))
+            m=await message.reply_text(f"<b><i> 𝖲𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝖿𝗈𝗋 '{search}' 🔎</i></b>")
             search = search.lower()
             find = search.split(" ")
             search = ""
@@ -1785,7 +1780,7 @@ async def auto_filter(client, msg, spoll=False):
             files, offset, total_results = await get_search_results(message.chat.id ,search, offset=0, filter=True)
             settings = await get_settings(message.chat.id)
             if not files:
-                await dlt.delete()
+                await m.delete()
                 if settings["spell_check"]:
                     return await advantage_spell_chok(client, msg)
                 else:
@@ -1797,10 +1792,7 @@ async def auto_filter(client, msg, spoll=False):
     else:
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
-        btn = [[
-                InlineKeyboardButton(f"Searching  🔍  for  '{search}'", callback_data=f"close_data")
-              ]]
-        dlt = await message.reply_sticker('CAACAgUAAxkBAAEKFJhk4hB-2p-tFjm4UQHkWXIon24fiwACoQADyJRkFOU68dHdpF6XMAQ', reply_markup=InlineKeyboardMarkup(btn))
+        m=await message.reply_text(f"<b><i> 𝖲𝖾𝖺𝗋𝖼𝗁𝗂𝗇𝗀 𝖿𝗈𝗋 '{search}' 🔎</i></b>")
         settings = await get_settings(message.chat.id)
         await msg.message.delete()
     # if 'is_shortlink' in settings.keys():
@@ -1896,7 +1888,7 @@ async def auto_filter(client, msg, spoll=False):
     # tutlink = await db.get_settings(self, id):
     # if tutlink and tutlink is not None:
     btn.insert(0,
-        [InlineKeyboardButton(text="𝐇𝐎𝐖 𝐓𝐎 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃", url='https://t.me/How_To_Download_Movies321/14')]
+        [InlineKeyboardButton(text="𝐇𝐎𝐖 𝐓𝐎 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃", url='https://t.me/+YD39Py3A0UAxZmI1')]
         )
     # imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
     cur_time = datetime.now(pytz.timezone('Asia/Kolkata')).time()
@@ -1992,10 +1984,10 @@ async def auto_filter(client, msg, spoll=False):
     # else:
     fuk = await message.reply_text(text=cap, reply_markup=InlineKeyboardMarkup(btn), disable_web_page_preview=True)
     
-    await dlt.delete()
+    await m.delete()
     try:
         if settings['auto_delete']:
-            await dlt.delete()
+            await m.delete()
             await asyncio.sleep(300)
             await fuk.delete()
             await message.delete()
