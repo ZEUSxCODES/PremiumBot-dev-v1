@@ -149,6 +149,10 @@ async def next_page(bot, query):
                 InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
+        )
+        btn.insert(0,
+        [InlineKeyboardButton(text="𝐇𝐎𝐖 𝐓𝐎 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃", url='https://t.me/+YD39Py3A0UAxZmI1')]
+                  )
     #    btn.insert(0, [
     #        InlineKeyboardButton("Sᴛᴀʀᴛ Bᴏᴛ", url=f"https://telegram.me/{temp.U_NAME}"),
     #        InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}")
@@ -427,9 +431,9 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             ]
         )
 
-    # btn.insert(0, [
-    #     InlineKeyboardButton("Hᴏᴡ ᴛᴏ Dᴏᴡɴʟᴏᴀᴅ⚡", url=await get_tutorial(query.message.chat.id))
-    # ])
+  #   btn.insert(0, [
+   #      InlineKeyboardButton("Hᴏᴡ ᴛᴏ Dᴏᴡɴʟᴏᴀᴅ⚡", url=await get_tutorial(query.message.chat.id))
+  #   ])
     if offset != "":
         try:
             if settings['max_btn']:
@@ -449,6 +453,10 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
     else:
         btn.append(
             [InlineKeyboardButton(text="𝐍𝐎 𝐌𝐎𝐑𝐄 𝐏𝐀𝐆𝐄𝐒 𝐀𝐕𝐀𝐈𝐋𝐀𝐁𝐋𝐄",callback_data="pages")]
+        )
+        )
+        btn.insert(0,
+        [InlineKeyboardButton(text="𝐇𝐎𝐖 𝐓𝐎 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃", url='https://t.me/+YD39Py3A0UAxZmI1')]
         )
     # if ENABLE_SHORTLINK == True:
   #  btn.insert(0, [
@@ -621,6 +629,10 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
             ]
             for file in files
         ]
+        )
+        btn.insert(0,
+        [InlineKeyboardButton(text="𝐇𝐎𝐖 𝐓𝐎 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃", url='https://t.me/+YD39Py3A0UAxZmI1')]
+        )
   #  btn.insert(0, [
  #       InlineKeyboardButton("𝐒𝐞𝐧𝐝 𝐀𝐥𝐥", callback_data=f"sendfiles#{key}"),
  #       InlineKeyboardButton("Sᴇʟᴇᴄᴛ ᴀɢᴀɪɴ", callback_data=f"seasons#{key}")
@@ -1838,6 +1850,10 @@ async def auto_filter(client, msg, spoll=False):
                 InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
                 InlineKeyboardButton("Sᴇᴀsᴏɴs", callback_data=f"seasons#{key}")
             ]
+        )
+        )
+        btn.insert(0,
+        [InlineKeyboardButton(text="𝐇𝐎𝐖 𝐓𝐎 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃", url='https://t.me/+YD39Py3A0UAxZmI1')]
         )
     # if ENABLE_SHORTLINK == True:
     #     btn.insert(0, [
