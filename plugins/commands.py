@@ -21,6 +21,11 @@ BATCH_FILES = {}
 
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
+    # Force subscription check
+    fsub_status = await ForceSub(client, message)
+    if fsub_status == 400:
+        return  # If force subscription check fails, return without sending the message
+    
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
@@ -109,6 +114,8 @@ async def start(client, message):
             parse_mode=enums.ParseMode.HTML
         )
         return
+    # Force subscription check
+    await ForceSub(client, message)
     data = message.command[1]
     try:
         pre, file_id = data.split('_', 1)
