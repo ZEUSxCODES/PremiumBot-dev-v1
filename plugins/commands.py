@@ -15,6 +15,7 @@ from database.connections_mdb import active_connection
 import re, asyncio, os, sys
 import json
 import base64
+from plugins.forcesub import ForceSub
 logger = logging.getLogger(__name__)
 
 BATCH_FILES = {}
