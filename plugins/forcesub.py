@@ -1,5 +1,5 @@
 import asyncio
-from info import Info  # Assuming your configuration class is named Info
+from info import info  # Assuming your configuration class is named Info
 import pyrogram
 from pyrogram import Client,filters, enums
 from pyrogram.errors import FloodWait, UserNotParticipant
