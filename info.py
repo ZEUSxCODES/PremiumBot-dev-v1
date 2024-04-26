@@ -42,6 +42,14 @@ REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
+# Updates channels
+UPDATES_CHANNEL = environ.get("UPDATES_CHANNEL")
+UPDATES_CHANNEL1 = environ.get("UPDATES_CHANNEL1")
+UPDATES_CHANNEL2 = environ.get("UPDATES_CHANNEL2")
+UPDATES_CHANNEL3 = environ.get("UPDATES_CHANNEL3")
+UPDATES_CHANNEL4 = environ.get("UPDATES_CHANNEL4")
+
+
 # MongoDB information
 DATABASE_URI = environ.get('DATABASE_URI', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "")
